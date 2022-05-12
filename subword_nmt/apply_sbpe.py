@@ -311,7 +311,7 @@ def encode(orig, bpe_codes, bpe_codes_reverse, vocab, separator, version, cache,
         word = check_vocab_and_split(word, bpe_codes_reverse, vocab, separator)
 
     cache[orig] = word
-    print("finalword", word)
+    #print("finalword", word)
     return word
 
 def recursive_split(segment, bpe_codes, vocab, separator, final=False):
