@@ -31,7 +31,7 @@ argparse.open = open
 
 class BPE(object):
 
-    def __init__(self, codes, merges=-1, separator='@@', vocab=None, glossaries=None):
+    def __init__(self, codes, merges=-1, separator='+', vocab=None, glossaries=None):
 
         codes.seek(0)
         offset=1
@@ -210,7 +210,7 @@ def create_parser(subparsers=None):
         metavar='PATH',
         help="Output file (default: standard output)")
     parser.add_argument(
-        '--separator', '-s', type=str, default='@@', metavar='STR',
+        '--separator', '-s', type=str, default='+', metavar='STR',
         help="Separator between non-final subword units (default: '%(default)s'))")
     parser.add_argument(
         '--vocabulary', type=argparse.FileType('r'), default=None,
